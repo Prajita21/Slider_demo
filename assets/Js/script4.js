@@ -81,8 +81,8 @@ window.addEventListener("load", () => {
 
             // varyings
             vTextureCoord = aTextureCoord;
-            vActiveTextureCoord = (activeTexMatrix * vec4(aTextureCoord, 0.0, 1.0)).xy;
-            vNextTextureCoord  = (nextTexMatrix * vec4(aTextureCoord, 0.0, 1.0)).yx; //xy is original
+            vActiveTextureCoord = (activeTexMatrix * vec4(aTextureCoord, 0.0, 25.0)).yz; //1.0 & xy is original
+            vNextTextureCoord  = (nextTexMatrix * vec4(aTextureCoord, 0.0, 1.0)).xy; 
 
             vVertexPosition = aVertexPosition;
         }

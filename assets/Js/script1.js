@@ -77,12 +77,12 @@ window.addEventListener("load", () => {
 
 
         void main() {
-            gl_Position = uPMatrix * uMVMatrix * vec4(aVertexPosition, 5.0);
+            gl_Position = uPMatrix * uMVMatrix * vec4(aVertexPosition, 5.0); // 1.0 is original
 
             // varyings
             vTextureCoord = aTextureCoord;
-            vActiveTextureCoord = (activeTexMatrix * vec4(aTextureCoord, 0.0, 1.0)).xy; //5.0 make changes
-            vNextTextureCoord  = (nextTexMatrix * vec4(aTextureCoord, 0.0, 1.0)).xy; //5.0 make changes
+            vActiveTextureCoord = (activeTexMatrix * vec4(aTextureCoord, 0.0, 1.0)).xy;
+            vNextTextureCoord  = (nextTexMatrix * vec4(aTextureCoord, 0.0, 1.0)).xy; 
 
             vVertexPosition = aVertexPosition;
         }
